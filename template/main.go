@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strings"
 )
 
 func part1() {
 	f, err := os.Open("input_test")
+	result := 0
 
 	if err != nil {
 		log.Fatal(err)
@@ -21,30 +21,29 @@ func part1() {
 
 	for scanner.Scan() {
 		s := scanner.Text()
-		line := strings.Split(s, "   ")
 	}
 
 	fmt.Println("Result is: ", result)
 }
 
-func part2() {
-	f, err := os.Open("input_test")
+// func part2() {
+// 	f, err := os.Open("input_test")
+//  result := 0
 
-	if err != nil {
-		log.Fatal(err)
-	}
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
 
-	defer f.Close()
+// 	defer f.Close()
 
-	scanner := bufio.NewScanner(f)
+// 	scanner := bufio.NewScanner(f)
 
-	for scanner.Scan() {
-		s := scanner.Text()
-		line := strings.Split(s, "   ")
-	}
+// 	for scanner.Scan() {
+// 		s := scanner.Text()
+// 	}
 
-	fmt.Println("Result is: ", result)
-}
+// 	fmt.Println("Result is: ", result)
+// }
 
 func main() {
 	part1()
