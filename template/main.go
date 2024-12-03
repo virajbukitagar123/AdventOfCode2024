@@ -5,7 +5,17 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 )
+
+func convertToInt(in string) int {
+	digit, err := strconv.Atoi(in)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return digit
+}
 
 func part1() {
 	f, err := os.Open("input_test")
