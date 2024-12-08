@@ -52,12 +52,10 @@ func recursionWithConcat(num uint64, list []int, currValue uint64) bool {
 
 	if len(list) == 0 {
 		if currValue == num {
-			fmt.Println(currValue)
+			// fmt.Println(currValue)
 		}
 		return currValue == num
 	}
-
-	// fmt.Println(currValue, list[0], convertToInt64(fmt.Sprintf("%v%v", currValue, list[0])))
 
 	return recursionWithConcat(num, list[1:], uint64(list[0])*currValue) || recursionWithConcat(num, list[1:], uint64(list[0])+currValue) || recursionWithConcat(num, list[1:],
 		convertToInt64(fmt.Sprintf("%v%v", currValue, list[0])))
@@ -98,7 +96,7 @@ func part2() {
 }
 
 func main() {
-	//part1()
+	part1()
 	part2()
 }
 

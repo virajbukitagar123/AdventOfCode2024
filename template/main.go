@@ -26,7 +26,6 @@ func part1() {
 	}
 
 	defer f.Close()
-
 	scanner := bufio.NewScanner(f)
 
 	for scanner.Scan() {
